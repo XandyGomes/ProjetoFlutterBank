@@ -3,7 +3,23 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         home: Scaffold(
-          body: Column(
+          body: ListaTransferencias(),
+          appBar: AppBar(
+            title: Text('Tranferências'),
+          ),
+          floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.add),
+            onPressed: () {},
+          ),
+        ),
+      ),
+    );
+  
+
+class ListaTransferencias extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
             children: [
               Card(
                 child: ListTile(
@@ -19,14 +35,6 @@ void main() => runApp(
                 ),
               )
             ],
-          ),
-          appBar: AppBar(
-            title: Text('Tranferências'),
-          ),
-          floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add),
-            onPressed: () {},
-          ),
-        ),
-      ),
-    );
+          );
+  }
+}
