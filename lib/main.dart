@@ -14,27 +14,30 @@ void main() => runApp(
         ),
       ),
     );
-  
+
+class ItemTransferencia extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: Icon(Icons.monetization_on),
+        title: Text('1.000,00'),
+        subtitle: Text('1.000,00'),
+      ),
+    );
+  }
+}
 
 class ListaTransferencias extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-            children: [
-              Card(
-                child: ListTile(
-                  title: Text('1.000,00'),
-                  subtitle: Text('1.000,00'),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: Icon(Icons.monetization_on),
-                  title: Text('1.000,00'),
-                  subtitle: Text('1.000,00'),
-                ),
-              )
-            ],
-          );
+      children: [
+        ItemTransferencia(),
+        ItemTransferencia(),
+        ItemTransferencia(),
+        ItemTransferencia(),
+      ],
+    );
   }
 }
