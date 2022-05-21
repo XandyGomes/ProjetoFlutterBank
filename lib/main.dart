@@ -15,14 +15,26 @@ void main() => runApp(
       ),
     );
 
+class Transferencia {
+  final double valor;
+  final int numeroConta;
+
+  Transferencia(this.valor, this.numeroConta);
+}
+
 class ItemTransferencia extends StatelessWidget {
+  final String valor;
+  final String numeroConta;
+
+  ItemTransferencia(this.valor, this.numeroConta);
+
   @override
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
         leading: Icon(Icons.monetization_on),
-        title: Text('1.000,00'),
-        subtitle: Text('1.000,00'),
+        title: Text(valor),
+        subtitle: Text(numeroConta),
       ),
     );
   }
@@ -33,10 +45,10 @@ class ListaTransferencias extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ItemTransferencia(),
-        ItemTransferencia(),
-        ItemTransferencia(),
-        ItemTransferencia(),
+        ItemTransferencia('100', '123-4'),
+        ItemTransferencia('200', '123-4'),
+        ItemTransferencia('300', '123-4'),
+        ItemTransferencia('400', '123-4'),
       ],
     );
   }
